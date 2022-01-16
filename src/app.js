@@ -17,13 +17,13 @@ app.get("/tasks", (req, res) => {
   res.status(200).json(tasks);
 });
 
-/* app.post("/tasks", (req, res) => {
+/* app.post("/tasks2", (req, res) => {
   res.status(200).json({});
 }); */
 
-app.post("/tasks2", (req, res) => {
+/* app.post("/tasks", (req, res) => {
   res.status(200).json({});
-});
+}); */
 
 app.post("/tasks", (req, res) => {
   const { title, description } = req.body;
@@ -41,7 +41,6 @@ app.post("/tasks", (req, res) => {
   const newTask = { ...req.body, id: v4() };
   tasks.push(newTask);
   res.status(200).json(newTask);
-});
- */
+}); */
 
 export default app;
