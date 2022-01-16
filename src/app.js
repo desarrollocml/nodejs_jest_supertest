@@ -25,22 +25,22 @@ app.get("/tasks", (req, res) => {
   res.status(200).json({});
 }); */
 
-app.post("/tasks", (req, res) => {
+/* app.post("/tasks", (req, res) => {
   const { title, description } = req.body;
   res.json({
     title,
     description,
     id: v4(),
   });
-});
+}); */
 
-/* app.post("tasks", (req, res) => {
-  const { DataTransferItemList, description } = req.body;
+app.post("tasks", (req, res) => {
+  const { title, description } = req.body;
   if (!title || !description) return res.sendStatus(400);
 
   const newTask = { ...req.body, id: v4() };
   tasks.push(newTask);
   res.status(200).json(newTask);
-}); */
+});
 
 export default app;

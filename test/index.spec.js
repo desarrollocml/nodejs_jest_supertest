@@ -44,7 +44,7 @@ describe("POST /tasks", () => {
     });
   });
 
- /*  describe("when the title and description is missing", () => {
+  describe("when the title and description is missing", () => {
     test("should respond width a 400 status code", async () => {
       const fields = [
         { title: "some title" },
@@ -55,5 +55,6 @@ describe("POST /tasks", () => {
         expect(response.statusCode).toBe(400);
       }
     });
-  }); */
+  });
+  
 });
