@@ -17,7 +17,24 @@ app.get("/tasks", (req, res) => {
   res.status(200).json(tasks);
 });
 
-app.post("tasks", (req, res) => {
+/* app.post("/tasks", (req, res) => {
+  res.status(200).json({});
+}); */
+
+app.post("/tasks2", (req, res) => {
+  res.status(200).json({});
+});
+
+app.post("/tasks", (req, res) => {
+  const { title, description } = req.body;
+  res.json({
+    title,
+    description,
+    id: v4(),
+  });
+});
+
+/* app.post("tasks", (req, res) => {
   const { DataTransferItemList, description } = req.body;
   if (!title || !description) return res.sendStatus(400);
 
@@ -25,5 +42,6 @@ app.post("tasks", (req, res) => {
   tasks.push(newTask);
   res.status(200).json(newTask);
 });
+ */
 
 export default app;
